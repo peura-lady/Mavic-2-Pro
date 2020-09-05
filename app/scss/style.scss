@@ -1,8 +1,199 @@
 @import "vars";
 @import "libs";
 @import "fonts";
+@import "global";
+
+.header {
+    position: fixed;
+    left: 0;
+    top: 30px;
+    right: 0;
+    z-index: 10;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 30px;
+        text-transform: uppercase;
+        line-height: 17px;
+        font-size: 15px;
+        @extend %ubuntu-medium;
+    }
+    &__btn{
+        color: #fff;
+        background-color: transparent;
+        padding: 6px 28px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        margin-right: 8px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+            color: #000;
+            background-color: #fff;
+        }
+    }
+    &__phone{
+        font-size: 16px;
+        line-height: 18px;
+        @extend %ubuntu-bold;
+    }
+}
+
+.menu {
+    &__list-item{
+        display: inline-block;
+        & + .menu__list-item{
+            padding-left: 20px;
+        }
+    }
+}
 
 
+.top {
+    background-image: url(../images/top-bg.jpg);
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23, 26, 28, 0) 50.28%, rgba(23, 26, 28, 0.00225974) 50.29%, rgba(4, 5, 5, 0.820343) 58.72%, rgba(5, 5, 6, 0.792703) 80.08%, #000000 87.89%);
+        opacity: 0.4;
+    }
+    &__wrapper{
+        display: flex;
+        align-items: flex-end;
+        // margin-top: 320px;
+        // height: 100vh;
+        // height: calc(100vh-75px);
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+    &__title{
+        font-size: 96px;
+        line-height: 115px;
+        @extend %sf-Semibold;
+        margin-bottom: 25px;
+    }
+    &__text{
+        margin: 25px 0 35px;
+        max-width: 325px;
+    }
+    &__social-item{
+        display: inline-block;
+        margin: 0 25px;
+    }
+    &__social-link{
+        opacity: 0.5;
+        transition: all .3s;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
+
+
+.products {
+}
+.products__title {
+}
+.products__inner {
+}
+.products__text {
+}
+.products__slider-box {
+}
+.products__slider-text {
+}
+.products__slider {
+}
+.products__slider-item {
+}
+.products__slider-img {
+}
+.benefits {
+}
+.benefits__items {
+}
+.benefits__item {
+}
+.benefits__num {
+}
+.benefits__img {
+}
+.benefits__info {
+}
+.benefits__info-title {
+}
+.benefits__info-text {
+}
+.specification {
+}
+.specification__inner {
+}
+.specification__item {
+}
+.specification__box {
+}
+.specification__box-title {
+}
+.specification__box-text {
+}
+.questions {
+}
+.questions__items {
+}
+.questions__item {
+}
+.questions__item-title {
+}
+.questions__item-text {
+}
+.contacts {
+}
+.contacts__inner {
+}
+.contacts__info {
+}
+.contacts__info-box {
+}
+.contacts__info-title {
+}
+.contacts__info-phone {
+}
+.contacts__info-email {
+}
+.contacts__form {
+}
+.contacts__form-title {
+}
+.contacts__form-text {
+}
+.contacts__form-line {
+}
+.contacts__form-input {
+}
+.contacts__form-textarea {
+}
+.contacts__form-btn {
+}
+.contacts__social-list {
+}
+.contacts__social-item {
+}
+.footer {
+}
+.footer__copy {
+}
 
 
 
