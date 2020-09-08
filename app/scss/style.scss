@@ -3,6 +3,8 @@
 @import "fonts";
 @import "global";
 
+// beginning of header
+
 .header {
     position: fixed;
     left: 0;
@@ -40,7 +42,6 @@
         @extend %ubuntu-bold;
     }
 }
-
 .menu {
     &__list-item{
         display: inline-block;
@@ -50,6 +51,8 @@
     }
 }
 
+// end of header
+// beginning of top
 
 .top {
     background-image: url(../images/top-bg.jpg);
@@ -99,6 +102,9 @@
         }
     }
 }
+
+// end of top
+// beginning of products
 
 .products {
     &__inner{
@@ -164,6 +170,8 @@
     }
 }
 
+// end of products
+// beginning of benefits
 
 .benefits {
     &__items{
@@ -179,10 +187,15 @@
             margin-left: 40px;
             transform: translateY(25px)
         }
-    }
-    &__item-one,
-    &__item-two,
-    &__item-three{
+        &:nth-child(3){
+            margin-left: 30px;
+        }
+        &:nth-child(4){
+            margin-left: 60px;
+        }
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3){
         position: relative;
         &::before{
             content: "";
@@ -190,32 +203,33 @@
             background-repeat: no-repeat;
             background-position: 0 0;
         }
-    }
-    &__item-one{
-        &::before{
-            height: 48px;
-            width: 245px;
-            background-image: url(../images/line-1.svg);
-            right: -60px;
-            top: 60px;
         }
-    }
-    &__item-two{
-        &::before{
-            height: 63px;
-            width: 463px;
-            background-image: url(../images/line-2.svg);
-            right: 530px;
-            top: 183px;
+        &:first-child{
+            &::before{
+                height: 48px;
+                width: 245px;
+                background-image: url(../images/line-1.svg);
+                right: -60px;
+                top: 60px;
+            }
         }
-    }
-    &__item-three{
-        &::before{
-            height: 39px;
-            width: 254px;
-            background-image: url(../images/line-3.svg);
-            right: -54px;
-            top: 77px;
+        &:nth-child(2){
+            &::before{
+                height: 63px;
+                width: 463px;
+                background-image: url(../images/line-2.svg);
+                right: 530px;
+                top: 183px;
+            }
+        }
+        &:nth-child(3){
+            &::before{
+                height: 43px;
+                width: 254px;
+                background-image: url(../images/line-3.svg);
+                right: -54px;
+                top: 77px;
+            }
         }
     }
     &__num{
@@ -240,7 +254,6 @@
     }
     &__info{
         width: 300px;
-
     }
     &__info-title{
         width: 123px;
@@ -255,30 +268,145 @@
     }
 }
 
-
+// end of benefits
+// beginning of specification
 
 .specification {
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 25px;
+    }
+    &__item-center{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    &__box{
+        width: 280px;
+        position: relative;
+        margin-top: 10px;
+        &::before{
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+        }
+    }
+    &__box-2{
+        margin-top: 140px;
+    }
+    &__box-4{
+        margin-top: 160px;
+    }
+    &__box-1::before{
+        background-image: url(../images/pointer-1.svg);
+        width: 229px;
+        height: 130px;
+        right: -185px;
+        top: 18px;
+    }
+    &__box-2::before{
+        background-image: url(../images/pointer-2.svg);
+        width: 346px;
+        height: 81px;
+        right: -322px;
+        bottom: 95px;
+    }
+    &__box-3::before{
+        background-image: url(../images/pointer-3.svg);
+        width: 258px;
+        height: 103px;
+        left: -285px;
+        top: 18px;
+    }
+    &__box-4::before{
+        background-image: url(../images/pointer-4.svg);
+        width: 124px;
+        height: 89px;
+        left: -132px;
+        bottom: 111px;
+    }
+
+    &__box-title{
+        font-size: 21px;
+        line-height: 28px;
+        @extend %ubuntu-bold;
+        margin-bottom: 10px;
+    }
+    &__box-text{
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 19px;
+    }
 }
-.specification__inner {
-}
-.specification__item {
-}
-.specification__box {
-}
-.specification__box-title {
-}
-.specification__box-text {
-}
+
+// end of specification
+// beginning of questions
+
 .questions {
+    &__items{
+        max-width: 757px;
+        padding-bottom: 15px;
+    }
+    &__item{
+        max-width: 690px;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: relative;
+        &:nth-child(3)::before{
+            content: '';
+            position: absolute;
+            background-image: url(../images/questions-bg.png);
+            width: 319px;
+            height: 125px;
+            top: -33px;
+            right: -392px;
+        }
+    }
+    &__item-title{
+        font-size: 21px;
+        line-height: 28px;
+        @extend %ubuntu-medium;
+        color: rgba(#fff, .8);
+        padding: 20px 10px 20px 40px;
+        position: relative;
+        margin-bottom: 4px;
+        cursor: pointer;
+        &::after{
+            content: url('../images/vector.svg');
+            position: absolute;
+            right: -72px;
+            top: 0;
+            width: 72px;
+            height: 67px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__item-text{
+        padding: 0px 5px 75px 50px;
+        font-size: 15px;
+        line-height: 22px;
+        margin: 0 0 4px;
+        display: none;
+    }
+    &__item.questions__item-active{
+        .questions__item-title::after{
+            transform: rotate(180deg);
+        }
+        .questions__item-text{
+            display: block;
+        }
+        display: block;
+    }
 }
-.questions__items {
-}
-.questions__item {
-}
-.questions__item-title {
-}
-.questions__item-text {
-}
+
+// end of questions
+// beginning of contacts
+
 .contacts {
 }
 .contacts__inner {
