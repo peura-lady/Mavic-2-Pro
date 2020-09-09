@@ -408,41 +408,114 @@
 // beginning of contacts
 
 .contacts {
+    &__inner{
+        display: flex;
+        padding-left: 25px;
+    }
+    &__info{
+        width: 240px;
+        margin-right: 60px;
+    }
+    &__info-box{
+        margin-bottom: 30px;
+    }
+    &__info-title,
+    &__form-title{
+        margin: 0 0 13px;
+        font-size: 21px;
+        line-height: 24px;
+        @extend %ubuntu-bold
+    }
+    &__info-phone,
+    &__info-email,
+    &__form-text{
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 19px;
+    }
+    &__info-email:hover{
+        text-decoration: underline;
+    }
+    &__form{
+        width: 570px;
+        margin-right: 106px;
+    }
+    &__form-text{
+        margin: 0 0 12px;
+    }
+    &__form-line{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    &__form-input,
+    &__form-textarea{
+        border: none;
+        @extend %ubuntu-regular;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 15px;
+        font-size: 13px;
+        line-height: 15px;
+        &::placeholder{
+            color: rgba(#fff, .4);
+        }
+    }
+    &__form-input{
+        width: 49%;
+    }
+    &__form-textarea{
+        min-height: 144px;
+        width: 100%;
+        resize: none;
+        margin-bottom: 20px;
+    }
+    &__form-btn{
+        color: #fff;
+        background-color: transparent;
+        padding: 9px 15px;
+        border: 1px solid #fff;
+        border-radius: 2px;
+        @extend %ubuntu-bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+            color: #000;
+            background-color: #fff;
+        }
+    }
+    &__social-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__social-item{
+        margin: 14px 0;
+    }
 }
-.contacts__inner {
-}
-.contacts__info {
-}
-.contacts__info-box {
-}
-.contacts__info-title {
-}
-.contacts__info-phone {
-}
-.contacts__info-email {
-}
-.contacts__form {
-}
-.contacts__form-title {
-}
-.contacts__form-text {
-}
-.contacts__form-line {
-}
-.contacts__form-input {
-}
-.contacts__form-textarea {
-}
-.contacts__form-btn {
-}
-.contacts__social-list {
-}
-.contacts__social-item {
-}
+
+// end of contacts
+// beginning of footer
+
 .footer {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+    &__copy{
+        text-align: right;
+        font-size: 13px;
+        line-height: 17px;
+        color: rgba(#fff, .64);
+    }
 }
-.footer__copy {
-}
+
+// end of footer
+
 
 
 
