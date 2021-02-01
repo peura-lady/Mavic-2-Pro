@@ -1,5 +1,6 @@
 # Mavic-2-Pro
-Project Mavic 2 Pro with Gulp and Git
+First test project "Mavic 2 Pro" using Gulp, Git and preprocessors. 
+This project has special features such as: PageScroll and Slider.
 
 
 https://peura-lady.github.io/Mavic-2-Pro/app/
